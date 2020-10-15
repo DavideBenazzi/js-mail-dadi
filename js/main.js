@@ -34,21 +34,31 @@ else {
  */
 alert('Giochiamo a dadi.')
 
-//Dado per il computer
-var computer = Math.floor( Math.random() * 6 ) + 1;
-console.log('Il computer ha ottenuto un : ' + computer);
+//Gioco Dadi ciclo for
+for (var c = 0; c < 1; c++) {
 
-//Dado per l'utente
-var utente = Math.floor( Math.random() * 6 ) + 1;
-console.log('Tu hai ottenuto un : ' + computer);
+  //Dado per il computer
+  var computer = Math.floor( Math.random() * 6 ) + 1;
 
-//Decisione del vincitore e stampa Messaggio
-if (computer > utente) {
-  alert('Ho vinto io, ho ottenuto un : ' + computer + ' mentre tu solo un : ' + utente);
-}
-else if (computer < utente) {
-  alert('Congratulazioni! Hai vinto tu con un : ' + utente + ' mentre io solo un : ' + computer);
-}
-else {
-  alert('Pareggio! Sono usciti per due volte : ' + utente);
+  //Dado per l'utente
+  var utente = Math.floor( Math.random() * 6 ) + 1;
+
+  //Decisione del vincitore e stampa Messaggio
+  if (computer > utente) {
+    alert('Ho vinto io, ho ottenuto un : ' + computer + ' mentre tu solo un : ' + utente);
+  }
+  else if (computer < utente) {
+    alert('Congratulazioni! Hai vinto tu con un : ' + utente + ' mentre io solo un : ' + computer);
+  }
+  else {
+    alert('Pareggio! Sono usciti per due volte : ' + utente);
+  }
+  //Vuoi continuare a giocare?
+  var continua = prompt('Vuoi giocare ancora ? Scrivi si oppure no');
+  if (continua === 'si') {
+    c--;
+  }
+  else {
+    alert('Peccato, ciao e buona giornata!')
+  }
 }
